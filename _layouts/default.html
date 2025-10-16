@@ -10,24 +10,22 @@
           </div>
 <!--<div class="parallax-window" data-parallax="scroll" data-image-src="/asset/img/20220708_185040(1).jpg"></div> -->
                       {% include navbar.html %}
-                      <div class="container-fluid shadow-lg">
-                        <!--Grid row-->
-                        <div class="row justify-content-md-cente" style="margin-bottom: 10px;margin-top: 10px;">
-                            <div class="col-md-12 text-center">
-                                <h2>{{page.title}}</h2>
-                              </div>
-                        </div>
-                      </div>
-                        <!--Grid row-->  
-                      <div class="container-fluid">
-                        <div class="row justify-content-md-center">
-                          <div class="col col-lg-3">
-                            {{ content }}
-                          </div>
-                          <div class="col-md-auto">
-                            <img src="{{ page.img }}" class="rounded">
-                          </div>
-                      </div>
+                      <div class="uk-child-width-expand@s" uk-grid>
+    <div class="uk-grid-item-match">
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3>Heading</h3>
+            <p>
+                Lorem ipsum dolor sit amet.
+            </p>
+        </div>
+     </div>
+    <div>
+        <h3>Heading</h3>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+    </div>
+</div>
             {% include footer.html %}
         </body>
 </html>
