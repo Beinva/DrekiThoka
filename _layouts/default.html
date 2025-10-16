@@ -4,8 +4,9 @@
         <body>
 
             {% include navbar.html %}
-            <div class="parallax-window shadow-sm" data-parallax="scroll" {% if page.img %} data-image-src="{{ page.img }}"{% else %}data-image-src="https://images2.imgbox.com/1d/de/CHlI6wzZ_o.jpg"{% endif %}>
-            </div>
+          <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200" style="background-image: url('images/dark.jpg');">
+            <h1 class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical">Headline</h1>
+          </div>
 <!--<div class="parallax-window" data-parallax="scroll" data-image-src="/asset/img/20220708_185040(1).jpg"></div> -->
                       <div class="container-fluid shadow-lg">
                         <!--Grid row-->
