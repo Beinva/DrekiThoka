@@ -1,6 +1,7 @@
 ---
 title: "Travail du textile"
-layout: atelier
+categorie:
+layout: post
 img: /DrekiThoka/asset/image/Commequiers0819(21)_JPG.jpg
 permalink: /ateliers/alimentation/
 ---
