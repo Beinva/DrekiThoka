@@ -1,4 +1,4 @@
 ---
-layout: atelier.html
+layout: atelier
 title: "Nos activités"
 ---
