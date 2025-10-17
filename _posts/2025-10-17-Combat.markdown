@@ -1,5 +1,5 @@
 ---
-title: "Brassage"
+title: "Combat"
 categories: atelier
 layout: atelier
 img: /DrekiThoka/asset/image/548455002_1422762166101972_1394925337229331490_n.jpg
