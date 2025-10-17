@@ -1,32 +1,31 @@
-<!DOCTYPE html>
 <html>
     {% include head.html %}
         <body>
-            {% include navbar.html %}
-            <div class="parallax-window shadow-sm" data-parallax="scroll" {% if page.img %} data-image-src="{{ page.img }}"{% else %}data-image-src="/asset/img/20220708_185040(1).jpg"{% endif %}></div>
-                      <div class="container-fluid shadow-lg">
-                        <!--Grid row-->
-                        <div class="row justify-content-md-cente" style="margin-bottom: 50px;">
-                            <div class="col-md-12 text-center">
-                                <h2>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h2>
-                              </div>
-                        </div>
-                      </div>
-                        <!--Grid row-->  
-                        <div class="container-fluid">
-                          {% for post in site.atelier %}
-                          <div class="row justify-content-md-center">
-                              <div class="col col-lg-5">
-                                {{ post.content}}
-                              </div>
-                              <div class="col-md-auto">
-                                <img src="{{ post.img }}" class="rounded float-start" alt="..." width="300" height="400">
-                            </div>
-                            </div>
-                        </div>
-                      </div>
-                      <br>
-                        {% endfor %}
+          <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200" style="background-image: url('https://picsum.photos/1920/450');">
+            <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical uk-text-bold">
+              <h1 class="uk-text-bold">Dreki Thoka</h1>
+              <p class="uk-text-normal">Reconstitution viking et byzantine IX-Xeme siècle</p>
+            </div> 
+          </div>
+<!--<div class="parallax-window" data-parallax="scroll" data-image-src="/asset/img/20220708_185040(1).jpg"></div> -->
+                      {% include navbar.html %}
+<div class="uk-section">
+  <div class="uk-container">
+  
+    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-grid" uk-grid="">
+      <div class="uk-card-media-left uk-cover-container uk-first-column">
+        <img src="/DrekiThoka/asset/image/552757464_1390068949386062_5036700335900836129_n.jpg" alt="" uk-cover="">
+        <canvas width="600" height="400"></canvas>
+      </div>
+      <div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">{{page.title}}</h3>
+            {{ content }}
+        </div>
+      </div>
+    </div>
+</div>
+</div>
             {% include footer.html %}
         </body>
 </html>
