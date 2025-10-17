@@ -2,8 +2,8 @@
 title: "Brassage"
 categories: atelier
 layout: atelier
-img: /DrekiThoka/asset/image/505584381_1341950100849846_1966080497941088456_n.jpg
-permalink: /ateliers/brassage/
+img: /DrekiThoka/asset/image/548455002_1422762166101972_1394925337229331490_n.jpg
+permalink: /ateliers/combat/
 ---
 # Atelier – Le brassage de la bière à l’époque viking
 ## Présentation

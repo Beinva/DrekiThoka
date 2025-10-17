@@ -3,7 +3,7 @@ title: "Travail du textile"
 categories: atelier
 layout: atelier
 img: /DrekiThoka/asset/image/Commequiers0819(21)_JPG.jpg
-permalink: /ateliers/alimentation/
+permalink: /ateliers/textile/
 ---
  La production de textile durant l'époque scandinave
 
