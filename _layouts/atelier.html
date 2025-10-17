@@ -1,6 +1,6 @@
 <html>
     {% include head.html %}
-        <body>
+    <body>
           <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200" style="background-image: url('https://picsum.photos/1920/450');">
             <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical uk-text-bold">
               <h1 class="uk-text-bold">Dreki Thoka</h1>
@@ -9,13 +9,13 @@
           </div>
 <!--<div class="parallax-window" data-parallax="scroll" data-image-src="/asset/img/20220708_185040(1).jpg"></div> -->
                       {% include navbar.html %}
-<div class="uk-section">
-  <div class="uk-container">
-        <img src="{{ page.img }}" alt="" uk-cover="">
-            <h3 class="uk-text-bold">{{page.title}}</h3>
-            {{ content }}
-  </div>
-</div>
-            {% include footer.html %}
-        </body>
+          <div class="uk-section">
+            <div class="uk-container">
+                  <img src="{{ page.img }}" alt="" uk-cover="">
+                      <h3 class="uk-text-bold">{{page.title}}</h3>
+                      {{ content }}
+            </div>
+          </div>
+                      {% include footer.html %}
+    </body>
 </html>
