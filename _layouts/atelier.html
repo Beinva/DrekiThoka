@@ -11,6 +11,20 @@
                       {% include navbar.html %}
           <div class="uk-section">
             <div class="uk-container">
+              <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+                {% for post in site.posts %}
+                  <div>
+                      <div class="uk-card uk-card-default uk-card-body">
+                          <div class="uk-inline">
+                              <img src="images/photo.jpg" width="1800" height="1200" alt="">
+                              <div class="uk-overlay uk-overlay-default uk-position-center">
+                                  <p>{{ page.title }}</p>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                {% endfor %}  
+              </div>
                   <img src="{{ page.img }}" alt="" uk-cover="">
                       <h3 class="uk-text-bold">{{page.title}}</h3>
                       {{ content }}
