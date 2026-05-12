@@ -1,0 +1,114 @@
+---
+layout: default
+title: Accueil
+---
+
+<!-- Hero Section -->
+<header class="py-5 bg-light border-bottom mb-4">
+  <div class="container text-center">
+    <h1 class="display-5 fw-bold text-primary">{{ site.title }}</h1>
+    <p class="lead text-muted mb-0">{{ site.description }}</p>
+  </div>
+</header>
+
+<!-- Section Catégories -->
+<div class="container my-5">
+  <h2 class="text-center mb-5">Nos Thématiques</h2>
+  
+  <div class="row g-4">
+    
+    <!-- Carte Forge -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm border-0 hover-lift">
+        <div class="card-body text-center p-4">
+          <div class="mb-3 fs-1">🔨</div>
+          <h3 class="card-title h4 text-danger">Forge</h3>
+          <p class="card-text text-muted">Art du métal, travail du fer, création d'objets artisanaux.</p>
+          <div class="mt-3">
+            <span class="badge bg-secondary">{{ site.forge | size }} articles</span>
+          </div>
+          <a href="/forge/" class="btn btn-outline-danger mt-3 w-100">Découvrir</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carte Plantes -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm border-0 hover-lift">
+        <div class="card-body text-center p-4">
+          <div class="mb-3 fs-1">🌿</div>
+          <h3 class="card-title h4 text-success">Plantes</h3>
+          <p class="card-text text-muted">Identification, usages médicinaux et pratiques botaniques.</p>
+          <div class="mt-3">
+            <span class="badge bg-secondary">{{ site.plantes | size }} articles</span>
+          </div>
+          <a href="/plantes/" class="btn btn-outline-success mt-3 w-100">Découvrir</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carte Teinture -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm border-0 hover-lift">
+        <div class="card-body text-center p-4">
+          <div class="mb-3 fs-1">🎨</div>
+          <h3 class="card-title h4 text-purple">Teinture</h3>
+          <p class="card-text text-muted">Colorants naturels, techniques de teinture végétale.</p>
+          <div class="mt-3">
+            <span class="badge bg-secondary">{{ site.teinture | size }} articles</span>
+          </div>
+          <a href="/teinture/" class="btn btn-outline-primary mt-3 w-100">Découvrir</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carte Céramique -->
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm border-0 hover-lift">
+        <div class="card-body text-center p-4">
+          <div class="mb-3 fs-1">🏺</div>
+          <h3 class="card-title h4 text-warning">Céramique</h3>
+          <p class="card-text text-muted">Tour, modelage, émaillage et cuisson des terres.</p>
+          <div class="mt-3">
+            <span class="badge bg-secondary">{{ site.ceramique | size }} articles</span>
+          </div>
+          <a href="/ceramique/" class="btn btn-outline-warning mt-3 w-100">Découvrir</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Section Derniers Articles -->
+<div class="container my-5 bg-light rounded p-4">
+  <h2 class="text-center mb-4">Dernières Actualités</h2>
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="list-group">
+        {% assign all_posts = site.forge | concat: site.plantes | concat: site.teinture | concat: site.ceramique | sort: 'date' | reverse %}
+        
+        {% for post in all_posts limit: 3 %}
+          <div class="list-group-item list-group-item-action flex-column align-items-start py-3">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">
+                <a href="{{ post.url }}" class="text-decoration-none text-dark">{{ post.title }}</a>
+              </h5>
+              <small class="text-muted">{{ post.date | date: "%d %b" }}</small>
+            </div>
+            <p class="mb-1 small text-muted">
+              <span class="badge bg-info text-dark">{{ post.collection | capitalize }}</span>
+            </p>
+          </div>
+        {% endfor %}
+        
+        {% if all_posts.size == 0 %}
+          <p class="text-center text-muted">Aucun article publié pour le moment.</p>
+        {% endif %}
+      </div>
+      <div class="text-center mt-3">
+        <a href="/blog/" class="btn btn-link">Voir tous les articles &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
