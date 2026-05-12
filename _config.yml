@@ -5,7 +5,7 @@ baseurl: /DrekiThoka//
 collections:
   forge:
     output: true
-    permalink: /forge/:path/
+    permalink: /forge/:path/   # <--- Cette ligne est obligatoire pour éviter le 404
   plantes:
     output: true
     permalink: /plantes/:path/
@@ -15,7 +15,7 @@ collections:
   ceramique:
     output: true
     permalink: /ceramique/:path/
-
+    
 defaults:
   - scope:
       path: ""
