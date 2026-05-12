@@ -1,2 +1,39 @@
 title: "Dreki Thoka"
 baseurl: /DrekiThoka//
+
+# Définir les collections
+collections:
+  forge:
+    output: true
+    permalink: /forge/:path/
+  plantes:
+    output: true
+    permalink: /plantes/:path/
+  teinture:
+    output: true
+    permalink: /teinture/:path/
+  ceramique:
+    output: true
+    permalink: /ceramique/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: forge
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: plantes
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: teinture
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: ceramique
+    values:
+      layout: post
