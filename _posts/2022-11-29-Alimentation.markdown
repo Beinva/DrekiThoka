@@ -1,6 +1,6 @@
 ---
 title: "Alimentation général"
-categories: Alimentation
+categories: forge
 layout: post
 img: /asset/img/PXL_20221028_175121214.jpg
 permalink: /ateliers/alimentation/
