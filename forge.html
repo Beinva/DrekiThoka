@@ -1,49 +1,21 @@
 ---
 layout: default
-title: "Forge"
+title: Articles sur la Forge
 ---
 
-<div class="container my-5 bg-light rounded p-4">
-  <h2 class="text-center mb-4">Dernières Actualités</h2>
+<div class="container my-5">
+  <h1>Articles sur la Forge 🔨</h1>
   <div class="row">
-    <div class="col-lg-8 mx-auto">
-      <div class="list-group">
-        
-        {% comment %}
-          On crée un tableau vide, puis on y ajoute les posts de chaque collection
-          Cette méthode évite l'erreur 'concat filter requires an array argument'
-        {% endcomment %}
-        {% assign all_posts = "" | split: "," %}
-        
-        {% if site.forge %}
-          {% assign all_posts = all_posts | concat: site.forge %}
-        {% endif %}
-        
-        {% assign all_posts = all_posts | sort: 'date' | reverse %}
-
-        {% if all_posts.size > 0 %}
-          {% for post in all_posts limit: 3 %}
-            <div class="list-group-item list-group-item-action flex-column align-items-start py-3">
-              <div class="d-flex w-100 justify-content-between">
-                <h5 class="mb-1">
-                  <a href="{{ post.url }}" class="text-decoration-none text-dark">{{ post.title }}</a>
-                </h5>
-                <small class="text-muted">{{ post.date | date: "%d %b" }}</small>
-              </div>
-              <p class="mb-1 small text-muted">
-                <span class="badge bg-info text-dark">{{ post.collection | capitalize }}</span>
-              </p>
-            </div>
-          {% endfor %}
-          
-          <div class="text-center mt-3">
-            <a href="/blog/" class="btn btn-link">Voir tous les articles &rarr;</a>
+    {% for post in site.forge %}
+      <div class="col-md-6 mb-4">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.content | strip_html | truncatewords: 30 }}</p>
+            <a href="{{ post.url }}" class="btn btn-outline-danger">Lire la suite</a>
           </div>
-        {% else %}
-          <p class="text-center text-muted py-4">Aucun article publié pour le moment.</p>
-        {% endif %}
-        
+        </div>
       </div>
-    </div>
+    {% endfor %}
   </div>
 </div>
