@@ -1,33 +1,53 @@
 <!DOCTYPE html>
-<html>
-    {% include head.html %}
-        <body>
-          <div class="uk-height-large uk-background-cover uk-light uk-flex" uk-parallax="bgy: -200" style="background-image: url('https://picsum.photos/1920/450');">
-            <div class="uk-width-1-2@m uk-text-center uk-margin-auto uk-margin-auto-vertical uk-text-bold">
-              <h1 class="uk-text-bold">Dreki Thoka</h1>
-              <p class="uk-text-normal">Reconstitution viking et byzantine IX-Xeme siècle</p>
-            </div> 
-          </div>
-<!--<div class="parallax-window" data-parallax="scroll" data-image-src="/asset/img/20220708_185040(1).jpg"></div> -->
-                      {% include navbar.html %}
-<div class="uk-section">
-  <div class="uk-container">
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
   
-    <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin uk-grid" uk-grid="">
-      <div class="uk-card-media-left uk-cover-container uk-first-column">
-        <img src="/DrekiThoka/asset/image/552757464_1390068949386062_5036700335900836129_n.jpg" alt="" uk-cover="">
-        <canvas width="600" height="400"></canvas>
-      </div>
-      <div>
-        <div class="uk-card-body">
-            <h3 class="uk-card-title">{{page.title}}</h3>
-            {{ content }}
-        </div>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Vos styles personnalisés (pour le filigrane et les couleurs spécifiques) -->
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+  <!-- Navigation (Optionnel mais recommandé) -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">{{ site.title }}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/forge/">Forge</a></li>
+          <li class="nav-item"><a class="nav-link" href="/plantes/">Plantes</a></li>
+          <li class="nav-item"><a class="nav-link" href="/teinture/">Teinture</a></li>
+          <li class="nav-item"><a class="nav-link" href="/ceramique/">Céramique</a></li>
+        </ul>
       </div>
     </div>
-</div>
-</div>
-            {% include footer.html %}
-        </body>
-</html>
+  </nav>
 
+  <!-- Contenu de la page -->
+  {{ content }}
+
+  <!-- Footer -->
+  <footer class="bg-light text-center py-4 mt-5">
+    <div class="container">
+      <p>&copy; 2024 {{ site.title }} - Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Script Bootstrap JS (nécessaire pour le menu mobile) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- FILIGRANE (Votre code CSS personnalisé doit être dans style.css) -->
+  <div class="watermark">
+    <img src="{{ '/images/filigrane.png' | relative_url }}" alt="Filigrane">
+  </div>
+
+</body>
+</html>
