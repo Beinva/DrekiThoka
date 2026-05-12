@@ -19,18 +19,6 @@ title: "Forge"
           {% assign all_posts = all_posts | concat: site.forge %}
         {% endif %}
         
-        {% if site.plantes %}
-          {% assign all_posts = all_posts | concat: site.plantes %}
-        {% endif %}
-        
-        {% if site.teinture %}
-          {% assign all_posts = all_posts | concat: site.teinture %}
-        {% endif %}
-        
-        {% if site.ceramique %}
-          {% assign all_posts = all_posts | concat: site.ceramique %}
-        {% endif %}
-
         {% assign all_posts = all_posts | sort: 'date' | reverse %}
 
         {% if all_posts.size > 0 %}
