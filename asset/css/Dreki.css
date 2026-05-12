@@ -1,0 +1,43 @@
+/* === EFFET SURVOL DES CARTES === */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+}
+
+/* Couleur spécifique pour Teinture (Bootstrap n'a pas de 'purple' par défaut en texte) */
+.text-purple {
+  color: #6f42c1 !important;
+}
+
+/* === FILIGRANE FIXE (CRUCIAL) === */
+.watermark {
+  position: fixed;
+  bottom: -60px;
+  right: -60px;
+  opacity: 0.25;
+  z-index: -1; /* Derrière tout le contenu */
+  pointer-events: none;
+  
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+  
+  /* Assurer qu'il ne bouge pas */
+  top: auto;
+  left: auto;
+}
+
+.watermark img {
+  width: 300px; /* Ajustez selon la taille de votre image */
+  height: auto;
+  display: block;
+}
+
+/* Assurer que le body ne crée pas de conflit */
+body {
+  min-height: 100vh;
+  position: relative;
+}
